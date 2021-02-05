@@ -5,7 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 import $ from 'jquery';
-import Popper from '@popperjs';
+import Popper from '@popperjs/core';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 
 ReactDOM.render(
