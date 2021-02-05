@@ -43,15 +43,3 @@ const Task = ({ task }) => {
 }
 
 export default Task
-
-/* {
-    id: '1'
-    title: 'Build Login Page',
-    tag1: 'FE',
-    tag2: 'BE',
-    tag3: 'FS',
-    text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut laudantium voluptatem, cum in culpa non consectetur suscipit, mollitia numquam doloribus sint, molestias maxime dolore eos autem amet a distinctio?',
-    date_added: '04/02/2020',
-    date_done: '',
-    isDone: 'false',
-}, */
