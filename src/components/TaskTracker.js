@@ -8,11 +8,21 @@ import CardBody from './card/CardBody'
 import Tasks from './tasks/Tasks'
 import { useState } from 'react'
 
-const pageTitle = 'Task Tracker'
+const pageTitle = 'Status Tracker'
 const TaskTracker = () => {
+
     const onClick = () => {
         console.log('click')
     }
+
+    const deleteTask = (id) => {
+        setTasks(tasks.filter((task) => task.id !== id))
+    }
+
+    const duplicateTask = (id) => {
+        setTasks(tasks.filter((task) => task.id !== id))
+    }
+
     const [tasks, setTasks] = useState([
         {
             id: '2',
@@ -21,6 +31,7 @@ const TaskTracker = () => {
             tagFE: '',
             tagBE: 'BE',
             tagFS: '',
+            tagCustom: 'LernSax',
             text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut laudantium voluptatem, cum in culpa non consectetur suscipit, mollitia numquam doloribus sint, molestias maxime dolore eos autem amet a distinctio?',
             date_added: '04/02/2020',
             date_done: '',
@@ -28,11 +39,12 @@ const TaskTracker = () => {
         },
         {
             id: '1',
-            title: 'Build Login Page',
+            title: 'Rebuild Login Page with React',
             person: 'CreatorSiSo',
             tagFE: 'FE',
             tagBE: '',
             tagFS: 'FS',
+            tagCustom: 'LernSax',
             text: 'Aut laudantium voluptatem, cum in culpa non consectetur suscipit, mollitia numquam doloribus sint, molestias maxime dolore eos autem amet a distinctio?',
             date_added: '04/02/2020',
             date_done: '',
@@ -45,6 +57,7 @@ const TaskTracker = () => {
             tagFE: 'FE',
             tagBE: 'BE',
             tagFS: 'FS',
+            tagCustom: 'Website',
             text: 'Aut laudantium voluptatem, cum in culpa non consectetur suscipit, mollitia numquam doloribus sint, molestias maxime dolore eos autem amet a distinctio?',
             date_added: '04/02/2020',
             date_done: '',
@@ -62,7 +75,7 @@ const TaskTracker = () => {
                             <Button onClick={onClick} text={<strong>+ Add new Task</strong>}/>
                         </div>
                     }/>
-                    <CardBody text={<Tasks tasks={tasks}/>}/>
+                    <CardBody text={<Tasks  onClick={onClick} onDelete={deleteTask} tasks={tasks}/>}/>
                 </div>
             </div>
         </div>
