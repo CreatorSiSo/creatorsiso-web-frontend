@@ -1,5 +1,5 @@
-import { BsCheck } from 'react-icons/bs';
-import { BsX } from 'react-icons/bs';
+import { BsCheck } from '../../../node_modules/react-icons/bs';
+import { BsX } from '../../../node_modules/react-icons/bs';
 
 import Badge from '../Badge'
 import Button from '../button/Button'
