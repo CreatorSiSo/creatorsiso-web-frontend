@@ -1,8 +1,6 @@
 import { BsCheck, BsX, BsChevronDown } from '../../../node_modules/react-icons/bs';
 import { FiX, FiCheck, FiEdit, FiCopy, FiXSquare } from '../../../node_modules/react-icons/fi';
 
-import { Button } from 'react-bootstrap'
-
 import Badge from '../Badge'
 import ButtonNestedDropdown from '../button/ButtonNestedDropdown'
 
@@ -11,7 +9,7 @@ const bgHover = 'rgba(231, 76, 60, .5)'
 const bgSuccess = 'rgba(0, 188, 140, .3)'
 const bgSuccessHover = 'rgba(0, 188, 140, .5)'
 
-const Task = ({ task, onClick, onToggle, onDelete }) => {
+const Task = ({ task, onClick, onToggle, onDelete, onDuplicate }) => {
     return (
         <div className={`card mb-2 ${[task.isDone ? 'border-success' : 'border-danger']}`}>
             <div className='card-header pb-0 px-3'>
@@ -40,9 +38,10 @@ const Task = ({ task, onClick, onToggle, onDelete }) => {
                                                     isCustomDropdownMenuStyle= {false}
                                                     isCustomDropdownItemStyle= {false}
 
-                                                    onDelete={onDelete}
-                                                    onToggle={onToggle}
                                                     onClick={onClick}
+                                                    onToggle={onToggle}
+                                                    onDelete={onDelete}
+                                                    onDuplicate={onDuplicate}
                                                     task={task}
                             />
                         :
@@ -65,11 +64,12 @@ const Task = ({ task, onClick, onToggle, onDelete }) => {
                                                     dropdown_item3_icon={<FiCopy className='mr-3'/>}
 
                                                     isCustomDropdownMenuStyle= {false}
-                                                    isCustomDropdownItemStyle= {true}
+                                                    isCustomDropdownItemStyle= {false}
 
-                                                    onDelete={onDelete}
-                                                    onToggle={onToggle}
                                                     onClick={onClick}
+                                                    onToggle={onToggle}
+                                                    onDelete={onDelete}
+                                                    onDuplicate={onDuplicate}
                                                     task={task}
                         />}
                     </div>

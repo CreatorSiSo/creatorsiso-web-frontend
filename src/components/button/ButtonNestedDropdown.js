@@ -23,7 +23,7 @@ const ButtonNestedDropdown = ({ bg_color,
                                 onClick,
                                 onToggle,
                                 onDelete,
-                                deleteTask,
+                                onDuplicate,
                                 task,
 }) => {
 return (<div        className='btn-group'
@@ -67,7 +67,7 @@ return (<div        className='btn-group'
                                   href="#"
                                 aria-labelledby="btnGroupDrop1">
                             <a  className= {bs_style_dropdown_item}
-                                style={isCustomDropdownMenuStyle ? {
+                                style={isCustomDropdownItemStyle ? {
                                         backgroundColor: bg_color, color: text_color,}
                                     :
                                         {}
@@ -77,7 +77,7 @@ return (<div        className='btn-group'
                                 {dropdown_item1_icon}{dropdown_item1_text}
                             </a>
                             <a  className= {bs_style_dropdown_item}
-                                style={isCustomDropdownMenuStyle ? {
+                                style={isCustomDropdownItemStyle ? {
                                         backgroundColor: bg_color, color: text_color,}
                                     :
                                         {}
@@ -88,11 +88,12 @@ return (<div        className='btn-group'
                                 {dropdown_item2_icon}{dropdown_item2_text}
                             </a>
                             <a  className= {bs_style_dropdown_item}
-                                style={isCustomDropdownMenuStyle ? {
+                                style={isCustomDropdownItemStyle ? {
                                         backgroundColor: bg_color, color: text_color,}
                                     :
                                         {}
                                 }
+                                onClick={() => onDuplicate(task)}
                                 href="#"
                             >
                                 {dropdown_item3_icon}{dropdown_item3_text}

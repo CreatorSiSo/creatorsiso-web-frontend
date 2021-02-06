@@ -9,7 +9,6 @@ import Tasks from './tasks/Tasks'
 
 import { useState } from 'react'
 
-const pageTitle = 'Status Tracker'
 const TaskTracker = () => {
 
     const toggleTaskStatus = (id) => {
@@ -28,9 +27,25 @@ const TaskTracker = () => {
         setTasks(tasks.filter((task) => task.id !== id))
     }
 
-    /* const duplicateTask = (id) => {
-        setTasks(tasks.filter((task) => task.id !== id))
-    } */
+    const duplicateTask = (task) => {
+        const newId = Math.floor(Math.random()*999999)+Math.floor(Math.random())
+        const duplicatedTask = 
+            {
+                id: newId,
+                title: task.title,
+                person: task.person,
+                tagFE: task.tagFE,
+                tagBE: task.tagBE,
+                tagFS: task.tagFS,
+                tagCustom: task.tagCustom,
+                text: task.text,
+                date_added: task.date_added,
+                date_done: task.date_done,
+                isDone: task.isDone,
+            }
+        setTasks(...tasks, [duplicatedTask])
+        console.log(tasks)
+    }
 
     const [tasks, setTasks] = useState([
         {
@@ -76,7 +91,7 @@ const TaskTracker = () => {
 
     return (
         <div style={{marginBottom: 15 + 'em'}}>
-            <Header bg_color='rgb(40, 42, 47)' text_color='white' b_style= 'font-weight-bold text-monospace py-2 m-0' text= {pageTitle}/>
+            <Header bg_color='rgb(40, 42, 47)' bs_style_Text='font-weight-bold text-monospace pt-2 pb-0 m-0' /* bs_style_small_Text='p-5' */ text={'<TaskTracker/>'} small_Text={'by CreatorSiSo'}/>
             <div className="container" style={{maxWidth: 800}}>
                 <div className='card mt-5'>
                     <CardHeader text={
@@ -85,7 +100,7 @@ const TaskTracker = () => {
                         </div>
                     }/>
                     {tasks.length > 0 ? (
-                        <CardBody text={<Tasks onClick={addTask} onToggle={toggleTaskStatus} onDelete={deleteTask} tasks={tasks}/>}/>
+                        <CardBody text={<Tasks onClick={addTask} onToggle={toggleTaskStatus} onDelete={deleteTask} onDuplicate={duplicateTask} tasks={tasks}/>}/>
                     )   :   (
                         <CardBody text={<div className='text-center'><strong>Go on and create a new Task.</strong>
                         <br/>
