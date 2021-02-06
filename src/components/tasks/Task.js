@@ -14,7 +14,7 @@ const Task = ({ task, onClick, onToggle, onDelete, onDuplicate }) => {
         <div className={`card mb-2 ${[task.isDone ? 'border-success' : 'border-danger']}`}>
             <div className='card-header pb-0 px-3'>
                 <div className='d-flex justify-content-between align-items-topline'>
-                    <h5 className='mb-0'>{task.title}</h5>
+                    <h5 className='mr-1 text-break mb-0'>{task.title}</h5>
                     <div>
                         {task.isDone ?
                             <ButtonNestedDropdown   bs_style_button='border-success btn btn-outline-success badge'
