@@ -43,8 +43,8 @@ const TaskTracker = () => {
                 date_done: task.date_done,
                 isDone: task.isDone,
             }
-        setTasks(...tasks, [duplicatedTask])
-        console.log(tasks)
+            
+        setTasks([...tasks, duplicatedTask])
     }
 
     const [tasks, setTasks] = useState([
