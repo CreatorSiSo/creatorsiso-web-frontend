@@ -43,7 +43,7 @@ const TaskTracker = () => {
                 date_done: task.date_done,
                 isDone: task.isDone,
             }
-            
+
         setTasks([...tasks, duplicatedTask])
     }
 
