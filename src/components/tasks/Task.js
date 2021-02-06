@@ -11,9 +11,9 @@ const bgHover = 'rgba(231, 76, 60, .5)'
 const bgSuccess = 'rgba(0, 188, 140, .3)'
 const bgSuccessHover = 'rgba(0, 188, 140, .5)'
 
-const Task = ({ task, onClick, onDelete }) => {
+const Task = ({ task, onClick, onToggle, onDelete }) => {
     return (
-        <div className='card mb-2'>
+        <div className={`card mb-2 ${[task.isDone ? 'border-success' : 'border-danger']}`}>
             <div className='card-header pb-0 px-3'>
                 <div className='d-flex justify-content-between align-items-topline'>
                     <h5 className='mb-0 mr-3'>{task.title}</h5>
@@ -41,6 +41,7 @@ const Task = ({ task, onClick, onDelete }) => {
                                                     isCustomDropdownItemStyle= {false}
 
                                                     onDelete={onDelete}
+                                                    onToggle={onToggle}
                                                     onClick={onClick}
                                                     task={task}
                             />
@@ -67,6 +68,7 @@ const Task = ({ task, onClick, onDelete }) => {
                                                     isCustomDropdownItemStyle= {true}
 
                                                     onDelete={onDelete}
+                                                    onToggle={onToggle}
                                                     onClick={onClick}
                                                     task={task}
                         />}

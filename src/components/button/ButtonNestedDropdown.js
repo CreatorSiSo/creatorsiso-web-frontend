@@ -21,11 +21,12 @@ const ButtonNestedDropdown = ({ bg_color,
                                 isCustomDropdownMenuStyle,
                                 isCustomDropdownItemStyle,
                                 onClick,
+                                onToggle,
                                 onDelete,
                                 deleteTask,
                                 task,
 }) => {
-return (    <div    className='btn-group'
+return (<div        className='btn-group'
                     role="group"
                     aria-label="Button group with nested dropdown"
             >
@@ -36,7 +37,7 @@ return (    <div    className='btn-group'
                                     {}
                                 }
                             className={bs_style_button}
-                            onClick={onClick}
+                            onClick={() => onToggle (task.id)}
                     >
                                 {button_icon} {button_text}
                     </button>

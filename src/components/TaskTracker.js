@@ -6,22 +6,31 @@ import CardHeader from './card/CardHeader'
 import CardBody from './card/CardBody'
 
 import Tasks from './tasks/Tasks'
+
 import { useState } from 'react'
 
 const pageTitle = 'Status Tracker'
 const TaskTracker = () => {
 
-    const onClick = () => {
-        console.log('click')
+    const toggleTaskStatus = (id) => {
+        setTasks(tasks.map((task) => task.id === id ?
+        { ...task, isDone: !task.isDone }
+        :
+        task
+        ))
+    }
+    
+    const addTask = (id) => {
+        console.log(id.currentTarget)
     }
 
     const deleteTask = (id) => {
         setTasks(tasks.filter((task) => task.id !== id))
     }
 
-    const duplicateTask = (id) => {
+    /* const duplicateTask = (id) => {
         setTasks(tasks.filter((task) => task.id !== id))
-    }
+    } */
 
     const [tasks, setTasks] = useState([
         {
@@ -71,11 +80,19 @@ const TaskTracker = () => {
             <div className="container" style={{maxWidth: 800}}>
                 <div className='card mt-5'>
                     <CardHeader text={
-                        <div className='text-right'>
-                            <Button onClick={onClick} text={<strong>+ Add new Task</strong>}/>
-                        </div>
+                            <div className='text-right'>
+                                <Button onClick={addTask} text={<strong>+ Add new Task</strong>}/>
+                            </div>
                     }/>
-                    <CardBody text={<Tasks  onClick={onClick} onDelete={deleteTask} tasks={tasks}/>}/>
+                    {tasks.length > 0 ? (
+                        <CardBody text={<Tasks onClick={addTask} onToggle={toggleTaskStatus} onDelete={deleteTask} tasks={tasks}/>}/>
+                    )   :   (
+                        <CardBody text={<div className='text-center'><strong>Go on and create a new Task.</strong>
+                        <br/>
+                        <small className='text-muted'>You probably got stuff to do ;)</small>
+                        </div>}/>
+                    )}
+                    
                 </div>
             </div>
         </div>
