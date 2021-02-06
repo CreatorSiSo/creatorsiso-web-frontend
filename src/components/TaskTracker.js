@@ -19,7 +19,7 @@ const TaskTracker = () => {
         task
         ))
     }
-    
+
     const addTask = (id) => {
         console.log(id.currentTarget)
     }
@@ -80,9 +80,9 @@ const TaskTracker = () => {
             <div className="container" style={{maxWidth: 800}}>
                 <div className='card mt-5'>
                     <CardHeader text={
-                            <div className='text-right'>
-                                <Button onClick={addTask} text={<strong>+ Add new Task</strong>}/>
-                            </div>
+                        <div className='text-right'>
+                            <Button onClick={addTask} text={<strong>+ Add new Task</strong>}/>
+                        </div>
                     }/>
                     {tasks.length > 0 ? (
                         <CardBody text={<Tasks onClick={addTask} onToggle={toggleTaskStatus} onDelete={deleteTask} tasks={tasks}/>}/>
