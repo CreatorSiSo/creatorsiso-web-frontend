@@ -82,6 +82,7 @@ const Task = ({ task, onClick, onToggle, onDelete, onDuplicate }) => {
                     <Badge bs_style="badge btn border-secondary mx-1" text={task.tagCustom}/>
                 </p>
             </div>
+            </div>
             <div className='card-body'>
             <p>{task.text}</p>
             </div>
@@ -89,7 +90,6 @@ const Task = ({ task, onClick, onToggle, onDelete, onDuplicate }) => {
                 <small className='mx-2'>Added: {task.date_added}</small>
                 <Badge bg_color='rgb(45, 47, 50)' b_style="badge" text={task.person}/>
             </div>
-        </div>
         </div>
     )}
 
