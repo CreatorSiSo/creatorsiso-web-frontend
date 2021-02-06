@@ -14,7 +14,7 @@ const Task = ({ task, onClick, onToggle, onDelete, onDuplicate }) => {
         <div className={`card mb-2 ${[task.isDone ? 'border-success' : 'border-danger']}`}>
             <div className='card-header pb-0 px-3'>
                 <div className='d-flex justify-content-between align-items-topline'>
-                    <h5 className='mb-0 mr-3'>{task.title}</h5>
+                    <h5 className='mb-0'>{task.title}</h5>
                     <div>
                         {task.isDone ?
                             <ButtonNestedDropdown   bs_style_button='border-success btn btn-outline-success badge'
@@ -75,7 +75,7 @@ const Task = ({ task, onClick, onToggle, onDelete, onDuplicate }) => {
                     </div>
                 </div>
             <div>
-                <p className='mt-2 ml-1 user-select-none'>
+                <p className='mt-1 mb-2 ml-1 user-select-none'>
                     <Badge bs_style="badge badge-danger mr-1" text={task.tagFE}/>
                     <Badge bs_style="badge badge-warning mr-1" text={task.tagBE}/>
                     <Badge bs_style="badge badge-info mr-1" text={task.tagFS}/>
@@ -83,7 +83,7 @@ const Task = ({ task, onClick, onToggle, onDelete, onDuplicate }) => {
                 </p>
             </div>
             </div>
-            <div className='card-body'>
+            <div className='card-body pt-3 pb-1 m-0'>
             <p>{task.text}</p>
             </div>
             <div className='card-footer user-select-none text-muted text-right py-1'>
