@@ -68,7 +68,7 @@ const TaskTracker = () => {
             tagFE: 'FE',
             tagBE: '',
             tagFS: 'FS',
-            tagCustom: 'Website',
+            tagCustom: 'Website / Tasktracker',
             text: 'Change the String for tagFE; tagBE; tagFS to a Boolean so its possible to just enable/disable them easily. Also add functionality to make it actually work!',
             date_added: '04/03/2021',
             date_done: '',
@@ -121,12 +121,12 @@ const TaskTracker = () => {
             tagBE: 'BE',
             tagFS: 'FS',
             tagCustom: 'Website',
-            text: 'Aut laudantium voluptatem, cum in culpa non consectetur suscipit, mollitia numquam doloribus sint, molestias maxime dolore eos autem amet a distinctio?',
+            text: 'Aut laudantium voluptatem, cum in culpa non consectetur suscipit, mollitia numquam doloribus sint, molestias maxime dolore eos autem amet a distinctio? Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates quod necessitatibus quas non beatae provident unde veritatis facilis laboriosam totam distinctio nesciunt harum deleniti voluptatem voluptatum, expedita libero eligendi cum!',
             date_added: '04/02/2021',
             date_done: '',
             isDone: true,
         },
-        /* {
+        {
             id: '00',
             title: 'Go on and delete all Messages! :)',
             person: 'Who knows maybe the Tasks wrote this',
@@ -140,7 +140,7 @@ const TaskTracker = () => {
             isDone: false,
         },
         {
-            id: '00',
+            id: '-1',
             title: 'Build Authentication System',
             person: 'CreatorSiSo',
             tagFE: '',
@@ -153,7 +153,7 @@ const TaskTracker = () => {
             isDone: false,
         },
         {
-            id: '1',
+            id: '-2',
             title: 'Rebuild Login Page with React',
             person: 'CreatorSiSo',
             tagFE: 'FE',
@@ -164,7 +164,7 @@ const TaskTracker = () => {
             date_added: '04/02/2021',
             date_done: '',
             isDone: false,
-        },*/
+        },
     ])
 
     return (
