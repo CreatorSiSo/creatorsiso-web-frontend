@@ -1,3 +1,25 @@
+/* firefox-scrollbar */
+* {
+    scrollbar-color: #757578 rgba(0, 0, 0, 0);
+    scrollbar-width: thin;
+}
+*:focus {
+    scrollbar-color: #888 rgba(0, 0, 0, 0);
+}
+/* webkit-scrollbar */
+::-webkit-scrollbar {
+    width: 5px;
+}
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0);
+}
+::-webkit-scrollbar-thumb {
+  background: #757578;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #888;
+}
+
 /* @import 'csiso_dark.css' */
 /* @import 'darkly.css' */
 /* @import 'bootstrap/dist/css/bootstrap.min.css' */
