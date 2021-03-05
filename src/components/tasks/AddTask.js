@@ -3,6 +3,7 @@ import { FiX, FiCheck, FiEdit, FiCopy, FiXSquare } from '../../../node_modules/r
 
 import Badge from '../badge/Badge'
 import BadgeInput from '../badge/BadgeInput'
+import BadgeButton from '../badge/BadgeButton'
 
 import Today from '../Today'
 
@@ -20,10 +21,10 @@ const Task = ({task, title, tagFE, tagBE, tagFS, tagCustom, person, onClick, onT
                 </div>
             <div>
                 <p className='mt-1 mb-2 ml-1 user-select-none'>
-                    <Badge bs_style="badge badge-danger mr-1" text={tagFE}/>
-                    <Badge bs_style="badge badge-warning mr-1" text={tagBE}/>
-                    <Badge bs_style="badge badge-info mr-1" text={tagFS}/>
-                    <Badge bs_style="badge btn border-secondary mx-1" text={tagCustom}/>
+                    <BadgeButton bs_style="badge badge-danger mr-1" text={tagFE}/>
+                    <BadgeButton bs_style="badge badge-warning mr-1" text={tagBE}/>
+                    <BadgeButton bs_style="badge badge-info mr-1" text={tagFS}/>
+                    <BadgeInput bs_style="badge btn border-secondary mx-1" text={tagCustom}/>
                 </p>
             </div>
             </div>
@@ -32,7 +33,7 @@ const Task = ({task, title, tagFE, tagBE, tagFS, tagCustom, person, onClick, onT
             </div>
             <div className='card-footer user-select-none text-muted text-right pt-1 pb-2'>
                 <small className='mx-2'>Added: {`${Today}`}</small>
-                <Badge bg_color='rgb(45, 47, 50)' b_style="badge" text={person}/>
+                <Badge bg_color='rgb(45, 47, 50)' bs_style="badge" text={person}/>
             </div>
         </div>
     )}

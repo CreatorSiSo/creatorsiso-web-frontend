@@ -1,10 +1,10 @@
-const Button = ({bg_color, text_color, b_style, text, isDisabled, onClick}) => {
+const Button = ({bg_color, text_color, bs_style, text, isDisabled, onClick}) => {
     return (
         <button onClick={onClick}
                 disabled={isDisabled}
                 style={{color: text_color,
                 backgroundColor: bg_color}}
-                className={b_style}>
+                className={bs_style}>
             {text}
         </button>
     )
@@ -12,7 +12,7 @@ const Button = ({bg_color, text_color, b_style, text, isDisabled, onClick}) => {
 
 Button.defaultProps = {
     text: 'Button',
-    b_style: 'btn btn-primary',
+    bs_style: 'btn btn-primary',
     isDisabled: false,
 }
 

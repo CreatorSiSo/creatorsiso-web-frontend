@@ -89,7 +89,7 @@ const Task = ({ task, onClick, onToggle, onDelete, onDuplicate }) => {
             </div>
             <div className='card-footer user-select-none text-muted text-right pt-1 pb-2'>
                 <small className='mx-2'>Added: {task.date_added}</small>
-                <Badge bg_color='rgb(45, 47, 50)' b_style="badge" text={task.person}/>
+                <Badge bg_color='rgb(45, 47, 50)' bs_style="badge" text={task.person}/>
             </div>
         </div>
     )}

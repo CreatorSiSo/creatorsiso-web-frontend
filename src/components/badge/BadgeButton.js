@@ -1,10 +1,10 @@
-const BadgeButton = ({bg_color, text_color, b_style, text, isDisabled, onClick}) => {
+const BadgeButton = ({bg_color, text_color, bs_style, text, isDisabled, onClick}) => {
     return (
         <button onClick={onClick}
                 disabled={isDisabled}
                 style={{color: text_color,
                 backgroundColor: bg_color}}
-                className={b_style}>
+                className={bs_style}>
             {text}
         </button>
     )
@@ -12,7 +12,7 @@ const BadgeButton = ({bg_color, text_color, b_style, text, isDisabled, onClick})
 
 BadgeButton.defaultProps = {
     text: 'Button',
-    b_style: 'badge btn btn-outline-success',
+    bs_style: 'badge btn btn-outline-success',
     isDisabled: false,
 }
 
