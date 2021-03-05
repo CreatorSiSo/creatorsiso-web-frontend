@@ -21,7 +21,7 @@ const TaskTracker = () => {
         ))
     }
 
-    const addTask = (id) => {
+    const toggleAddTask = (id) => {
         console.log(id.currentTarget)
     }
 
@@ -179,25 +179,30 @@ const TaskTracker = () => {
             <div className="container" style={{maxWidth: 800}}>
                 <div className='card mt-5'>
                     <CardHeader text={
-                        <div className='text-right'>
-                            <Button onClick={addTask}
-                                    text={<strong>+ Add new Task</strong>}
-                            />
+                        <div>
+                                <AddTask task={'hi'}
+                                onClick={toggleAddTask}
+                                onToggle={toggleTaskStatus}
+                                onDelete={deleteTask}
+                                onDuplicate={duplicateTask}
+                                />
+                            <div className='text-right'>
+                                <Button onClick={toggleAddTask}
+                                        text={<strong>+ Add new Task</strong>}
+                                />
+                            </div>
                         </div>
                     }/>
-                    <CardBody text={
-                        <>
-                            <AddTask task={'hi'} onClick={addTask} onToggle={toggleTaskStatus} onDelete={deleteTask} onDuplicate={duplicateTask}/>
-                            <hr/>
-                        </>
-                    }/>
                     {tasks.length > 0 ? (
-                        <CardBody text={<Tasks onClick={addTask} onToggle={toggleTaskStatus} onDelete={deleteTask} onDuplicate={duplicateTask} tasks={tasks} className='mt-0'/>}/>
+                        <CardBody text={<Tasks onClick={toggleAddTask} onToggle={toggleTaskStatus} onDelete={deleteTask} onDuplicate={duplicateTask} tasks={tasks} className='mt-0'/>}/>
                     )   :   (
-                        <CardBody text={<div className='text-center'><strong>Go on and create a new Task.</strong>
-                        <br/>
-                        <small className='text-muted'>You probably got stuff to do ;)</small>
-                        </div>}/>
+                        <CardBody text={
+                            <div className='text-center'>
+                                <strong>Go on and create a new Task.</strong>
+                                <br/>
+                                <small className='text-muted'>You probably got stuff to do ;)</small>
+                            </div>
+                        }/>
                     )}
                 </div>
             </div>
