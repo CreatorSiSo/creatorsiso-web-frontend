@@ -1,7 +1,8 @@
 import { BsCheck, BsX, BsChevronDown } from '../../../node_modules/react-icons/bs';
 import { FiX, FiCheck, FiEdit, FiCopy, FiXSquare } from '../../../node_modules/react-icons/fi';
 
-import Badge from '../Badge'
+import Badge from '../badge/Badge'
+
 import ButtonNestedDropdown from '../button/ButtonNestedDropdown'
 
 const bgDanger = 'rgba(231, 76, 60, .3)'
