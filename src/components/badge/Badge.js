@@ -1,9 +1,11 @@
 const Badge = ({bg_color, text_color, bs_style, text}) => {
     return (
-        <small  style={{color: text_color,
-                backgroundColor: bg_color}}
-                className={bs_style}
-                >
+        <small  
+            style={{color: text_color,
+                backgroundColor: bg_color
+            }}
+            className={bs_style}
+        >
             {text}
         </small>
     )

@@ -17,14 +17,14 @@ const Task = ({task, title, tagFE, tagBE, tagFS, tagCustom, person, onClick, onT
         <div className={`card mb-2 border-secondary`}>
             <div className='card-header pb-0 px-3'>
                 <div className='d-flex justify-content-between align-items-topline'>
-                    <h5 className='mr-1 text-break mb-0'>{title}</h5>
+                    <input className='mr-1 text-break mb-0'>{title}</input>
                 </div>
             <div>
                 <p className='mt-1 mb-2 ml-1 user-select-none'>
-                    <BadgeButton bs_style="badge badge-danger mr-1" text={tagFE}/>
-                    <BadgeButton bs_style="badge badge-warning mr-1" text={tagBE}/>
-                    <BadgeButton bs_style="badge badge-info mr-1" text={tagFS}/>
-                    <BadgeInput bs_style="badge btn border-secondary mx-1" text={tagCustom}/>
+                    <BadgeButton bs_style="badge btn btn-outline-danger mr-1 shadow-none" text={tagFE}/>
+                    <BadgeButton bs_style="badge btn btn-outline-warning mr-1 shadow-none" text={tagBE}/>
+                    <BadgeButton bs_style="badge btn btn-outline-info mr-1 shadow-none" text={tagFS}/>
+                    <BadgeInput bs_style="border-secondary form-control mx-1" text={tagCustom}/>
                 </p>
             </div>
             </div>
