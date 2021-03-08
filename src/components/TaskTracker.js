@@ -181,7 +181,8 @@ const TaskTracker = () => {
                     <CardHeader text={
                         <>
                             <AddTask    
-                                task={'hi'}
+                                task='Add'
+                                person='CreatorSiSo'
                                 onClick={toggleAddTask}
                                 onToggle={toggleTaskStatus}
                                 onDelete={deleteTask}
