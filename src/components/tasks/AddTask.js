@@ -21,9 +21,9 @@ const Task = ({task, title, tagFE, tagBE, tagFS, tagCustom, person, onClick, onT
                 </div>
             <div>
                 <p className='mt-1 mb-2 ml-1 user-select-none'>
-                    <BadgeButton bs_style="badge btn btn-outline-danger mr-1 shadow-none" text={tagFE}/>
-                    <BadgeButton bs_style="badge btn btn-outline-warning mr-1 shadow-none" text={tagBE}/>
-                    <BadgeButton bs_style="badge btn btn-outline-info mr-1 shadow-none" text={tagFS}/>
+                    <BadgeButton bs_style="badge btn btn-outline-danger mr-1 shadow-none" text='FE'/>
+                    <BadgeButton bs_style="badge btn btn-outline-warning mr-1 shadow-none" text='BE'/>
+                    <BadgeButton bs_style="badge btn btn-outline-info mr-1 shadow-none" text='FS'/>
                     <BadgeInput bs_style="border-secondary form-control mx-1" text={tagCustom}/>
                 </p>
             </div>
